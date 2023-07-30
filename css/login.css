@@ -1,0 +1,127 @@
+.login-div {
+  /* margin-top: 270px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-div span:first-child {
+  color: white;
+  font-size: 60px;
+  text-align: center;
+}
+.login-div input {
+  width: 570px;
+  margin-top: 15px;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 50px;
+  text-align: center; /* 구글링 */
+  border-bottom: solid; /* 구글링 */
+  outline: none;
+  /* 구글링 */
+}
+.hidden {
+  visibility: hidden;
+}
+.login-bottomdiv {
+  margin-bottom: 25px;
+}
+.login-bottomdiv button {
+  background: none;
+  border: solid 1px;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  font-size: 15px;
+}
+.login-bottomdiv button:first-child {
+  margin-right: 10px;
+}
+.warning {
+  margin-top: 30px;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+@keyframes animation1001 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animation0001 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animation1000 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.animation1001 {
+  animation: animation1001 1s linear;
+}
+.animation0001 {
+  animation: animation0001 1s linear;
+}
+.animation1000 {
+  animation: animation1000 1s linear;
+}
+
+@keyframes animation001 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animation100 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.animation001 {
+  animation: animation001 0.3s linear;
+}
+.animation100 {
+  animation: animation100 0.3s linear;
+}
