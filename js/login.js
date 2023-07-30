@@ -10,7 +10,6 @@ const loginBottomLastButton = document.querySelector(
   ".login-bottomdiv button:last-child"
 );
 const warningSpan = document.querySelector(".warning");
-////////////////////////////////////////////////////
 function chageEmailSpan() {
   const name = localStorage.getItem("username");
   loginSpan.innerText = `What's your email, ${name}?`;
@@ -34,16 +33,6 @@ function chagePasswordSpan() {
     '<i class="fa-solid fa-key fa-2xs"></i> Change password';
   loginBottomFirstButton.classList.add("Email");
 }
-// function changePasswordSpan() {
-//
-//
-
-//
-//   loginBottomFirstButton.innerHTML = `<i class="fa-solid fa-chevron-left fa-2xs"></i>
-//   Email`;
-//   loginBottomLastButton.innerHTML =
-//     '<i class="fa-solid fa-key fa-2xs"></i> Change password';
-// }
 function check() {
   if (loginInput.type == "password" && loginInput.value.length < 6) {
     warningSpan.innerText = "Passwords need to be at least 6 characters long.";
@@ -51,6 +40,9 @@ function check() {
     warningSpan.classList.add("animation001");
 
     setTimeout(removeWarningAnimation, 300);
+  } else {
+    localStorage.setItem("userPassword", loginInput.value);
+    window.location = "homepage.html";
   }
 }
 function nextPage() {}
@@ -76,12 +68,8 @@ function save(event) {
     setTimeout(removeSaveAnimation, 1000);
   } else if (loginInput.type == "password") {
     check();
-    localStorage.setItem("userPassword", loginInput.value);
-    window.location = "homepage.html";
   }
 }
-
-///////////////////////////////////////////////////////////
 function backEmail() {
   loginSpan.innerText = "Hello, what's your name?";
   loginInput.style.width = "570px";
@@ -116,19 +104,16 @@ function back(event) {
     setTimeout(removeBackAnimation, 900);
   }
 }
-//////////////////////////////////////////////////////////////////
 function removeWarningAnimation() {
   warningSpan.classList.remove("animation001");
 }
 function warning(event) {
   event.preventDefault();
-  //   if()
   warningSpan.classList.remove("hidden");
   warningSpan.classList.add("animation001");
 
   setTimeout(removeWarningAnimation, 300);
 }
-////////////////////////////////////////////////////////////////////
 function removeSenseAnimation() {
   warningSpan.classList.add("hidden");
   warningSpan.classList.remove("animation100");
@@ -139,7 +124,6 @@ function sense() {
     setTimeout(removeSenseAnimation, 250);
   }
 }
-
 loginForm.addEventListener("submit", save);
 loginBottomFirstButton.addEventListener("click", back);
 loginInput.addEventListener("invalid", warning);

@@ -6,9 +6,7 @@ const randomImage = ImageArray[Math.floor(Math.random() * ImageArray.length)];
 
 function imageSetting() {
   body.backgroundImage = `url(${randomImage})`;
-  body.backgroundRepeat = "no-repeat";
   body.backgroundSize = "cover";
-  body.backgroundAttachment = "fixed";
   body.backgroundPosition = "center";
 }
 
