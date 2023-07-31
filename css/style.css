@@ -1,13 +1,12 @@
-/* @import "/CSS/index.css"; */
 @import "/CSS/login.css";
 
 body {
   height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
 }
 .title-m {
   background-color: white;
