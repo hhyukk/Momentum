@@ -1,8 +1,10 @@
 const loginForm = document.querySelector(".login-form");
 const loginInput = document.querySelector(".login-form input");
+const loginDiv = document.querySelector(".login-div");
+
 const loginSpan = document.querySelector(".login-div span");
+
 const loginBottomDiv = document.querySelector(".login-bottomdiv");
-const inputDiv = document.querySelector(".login-div");
 const loginBottomFirstButton = document.querySelector(
   ".login-bottomdiv button:first-child"
 );
@@ -16,9 +18,14 @@ function chageEmailSpan() {
   loginInput.value = "";
   loginInput.style.width = "490px";
   loginInput.type = "email";
+  loginBottomFirstButton.className = "login-bottomdiv__email";
+  loginBottomFirstButton.innerHTML = `<i class="fa-solid fa-chevron-left fa-2xs"></i>
+  Change name`;
+  loginBottomLastButton.innerHTML = `<i class="fa-solid fa-share fa-2xs"></i>
+  Stay logged out`;
 }
 function removeSaveAnimation() {
-  inputDiv.classList.remove("animation1001");
+  loginDiv.classList.remove("animation1001");
   loginBottomDiv.classList.remove("animation0001");
   loginBottomDiv.classList.remove("animation1001");
 }
@@ -31,7 +38,7 @@ function chagePasswordSpan() {
   loginBottomFirstButton.innerHTML = `<i class="fa-solid fa-chevron-left fa-2xs"></i> Email`;
   loginBottomLastButton.innerHTML =
     '<i class="fa-solid fa-key fa-2xs"></i> Change password';
-  loginBottomFirstButton.classList.add("Email");
+  loginBottomFirstButton.className = "login-bottomdiv__password";
 }
 function check() {
   if (loginInput.type == "password" && loginInput.value.length < 6) {
@@ -52,8 +59,7 @@ function save(event) {
 
   if (loginInput.type == "text") {
     localStorage.setItem("username", getuser);
-
-    inputDiv.classList.add("animation1001");
+    loginDiv.classList.add("animation1001");
     loginBottomDiv.classList.remove("hidden");
     loginBottomDiv.classList.add("animation0001");
 
@@ -62,7 +68,7 @@ function save(event) {
   } else if (loginInput.type == "email") {
     localStorage.setItem("useremail", getuser);
 
-    inputDiv.classList.add("animation1001");
+    loginDiv.classList.add("animation1001");
     loginBottomDiv.classList.add("animation1001");
     setTimeout(chagePasswordSpan, 500);
     setTimeout(removeSaveAnimation, 1000);
@@ -78,7 +84,7 @@ function backEmail() {
 }
 function removeBackAnimation() {
   loginBottomDiv.classList.add("hidden");
-  inputDiv.classList.remove("animation1001");
+  loginDiv.classList.remove("animation1001");
   loginBottomDiv.classList.remove("animation1000");
 }
 function chageEmailButton() {
@@ -89,19 +95,18 @@ function chageEmailButton() {
 }
 function back(event) {
   event.preventDefault();
-
-  if (loginBottomFirstButton.className.indexOf("Email") != -1) {
-    inputDiv.classList.add("animation1001");
-    loginBottomDiv.classList.add("animation1001");
-    setTimeout(chageEmailSpan, 500);
-    setTimeout(chageEmailButton, 500);
-    setTimeout(removeSaveAnimation, 1000);
-  } else {
-    inputDiv.classList.add("animation1001");
+  console.log(loginBottomFirstButton.className.indexOf("email"));
+  if (loginBottomFirstButton.className.indexOf("email") != -1) {
+    loginDiv.classList.add("animation1001");
     loginBottomDiv.classList.add("animation1000");
-
     setTimeout(backEmail, 500);
     setTimeout(removeBackAnimation, 900);
+  } else {
+    loginDiv.classList.add("animation1001");
+    loginBottomDiv.classList.add("animation1001");
+
+    setTimeout(chageEmailSpan, 500);
+    setTimeout(removeSaveAnimation, 900);
   }
 }
 function removeWarningAnimation() {
