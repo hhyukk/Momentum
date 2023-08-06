@@ -12,6 +12,9 @@ const loginBottomLastButton = document.querySelector(
   ".login-bottomdiv button:last-child"
 );
 const warningSpan = document.querySelector(".warning");
+const loginPage = document.querySelector(".loginPage");
+const animationForwards = document.querySelector(".animation1000");
+
 function chageEmailSpan() {
   const name = localStorage.getItem("username");
   loginSpan.innerText = `What's your email, ${name}?`;
@@ -49,7 +52,8 @@ function check() {
     setTimeout(removeWarningAnimation, 300);
   } else {
     localStorage.setItem("userPassword", loginInput.value);
-    window.location = "homepage.html";
+    loginPage.classList.add("animation1000");
+    loginPage.style.animationFillMode = "forwards";
   }
 }
 function nextPage() {}

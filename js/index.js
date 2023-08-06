@@ -1,13 +1,26 @@
+const loginPageStyle = document.querySelector(".loginPage").style;
+const ImageArray_loginPage = ["/image/풍경3.png", "/image/풍경4.jpg"];
+const randomImage_loginPage =
+  ImageArray_loginPage[Math.floor(Math.random() * ImageArray_loginPage.length)];
+function imageSetting_loginPage() {
+  loginPageStyle.backgroundImage = `url(${randomImage_loginPage})`;
+  loginPageStyle.backgroundSize = "cover";
+  loginPageStyle.backgroundPosition = "center";
+}
+
 const body = document.body.style;
 
-const ImageArray = ["/image/c.jpg", "/image/풍경3.png", "/image/풍경4.jpg"];
-
+const ImageArray = [
+  "/image/homepageBackground.jpg",
+  "/image/homepageBackground1.jpg",
+];
 const randomImage = ImageArray[Math.floor(Math.random() * ImageArray.length)];
 
-function imageSetting() {
+function imageSetting_homePage() {
   body.backgroundImage = `url(${randomImage})`;
   body.backgroundSize = "cover";
   body.backgroundPosition = "center";
 }
 
-imageSetting();
+imageSetting_loginPage();
+imageSetting_homePage();

@@ -96,7 +96,7 @@
   animation: animation0001 1s linear;
 }
 .animation1000 {
-  animation: animation1000 1s linear;
+  animation: animation1000 1s linear forwards;
 }
 
 @keyframes animation001 {

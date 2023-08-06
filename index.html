@@ -7,32 +7,36 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="title-m">
-      <span>m</span>
+    <div class="loginPage">
+      <div class="title-m">
+        <span>m</span>
+      </div>
+
+      <div class="login-div">
+        <span>Hello, what's your name?</span>
+        <form class="login-form">
+          <input type="text" />
+        </form>
+        <span class="warning hidden">
+          Sorry, a doesn't seem to be a valid email address. Please try again.
+        </span>
+      </div>
+
+      <div class="login-bottomdiv hidden">
+        <form>
+          <button class="login-bottomdiv__text">
+            <i class="fa-solid fa-chevron-left fa-2xs"></i>
+            Change name
+          </button>
+          <button>
+            <i class="fa-solid fa-share fa-2xs"></i>
+            Stay logged out
+          </button>
+        </form>
+      </div>
     </div>
 
-    <div class="login-div">
-      <span>Hello, what's your name?</span>
-      <form class="login-form">
-        <input type="text" />
-      </form>
-      <span class="warning hidden">
-        Sorry, a doesn't seem to be a valid email address. Please try again.
-      </span>
-    </div>
-
-    <div class="login-bottomdiv hidden">
-      <form>
-        <button class="login-bottomdiv__text">
-          <i class="fa-solid fa-chevron-left fa-2xs"></i>
-          Change name
-        </button>
-        <button>
-          <i class="fa-solid fa-share fa-2xs"></i>
-          Stay logged out
-        </button>
-      </form>
-    </div>
+    <div class="homepage"></div>
 
     <script src="JS/index.js"></script>
     <script src="JS/login.js"></script>
