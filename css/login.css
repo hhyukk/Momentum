@@ -87,6 +87,7 @@
   }
   100% {
     opacity: 0;
+    display: none;
   }
 }
 .animation1001 {
@@ -96,7 +97,7 @@
   animation: animation0001 1s linear;
 }
 .animation1000 {
-  animation: animation1000 1s linear forwards;
+  animation: animation1000 1s linear;
 }
 
 @keyframes animation001 {

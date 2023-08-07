@@ -1,0 +1,27 @@
+header button:last-child {
+  display: flex;
+}
+header button:last-child > i {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.header__information {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.header__information span:first-child {
+  font-size: 33px;
+}
+.header__information i {
+  font-size: 1px;
+  position: absolute;
+  top: 12px;
+  right: -12px;
+}
+.header__information span:last-child {
+  font-size: 15px;
+  position: absolute;
+  bottom: -35px;
+  right: -17px;
+}

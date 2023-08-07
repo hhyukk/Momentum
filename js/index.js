@@ -7,20 +7,21 @@ function imageSetting_loginPage() {
   loginPageStyle.backgroundSize = "cover";
   loginPageStyle.backgroundPosition = "center";
 }
+imageSetting_loginPage();
 
 const body = document.body.style;
 
 const ImageArray = [
   "/image/homepageBackground.jpg",
   "/image/homepageBackground1.jpg",
+  "/image/homepageBackground2.avif",
 ];
 const randomImage = ImageArray[Math.floor(Math.random() * ImageArray.length)];
 
 function imageSetting_homePage() {
   body.backgroundImage = `url(${randomImage})`;
-  body.backgroundSize = "cover";
   body.backgroundPosition = "center";
+  body.backgroundSize = "cover";
 }
 
-imageSetting_loginPage();
 imageSetting_homePage();
