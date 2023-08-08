@@ -133,7 +133,12 @@ function sense() {
     setTimeout(removeSenseAnimation, 250);
   }
 }
-loginForm.addEventListener("submit", save);
-loginBottomFirstButton.addEventListener("click", back);
-loginInput.addEventListener("invalid", warning);
-loginInput.addEventListener("input", sense);
+
+if (localStorage.getItem("userPassword") === null) {
+  loginForm.addEventListener("submit", save);
+  loginBottomFirstButton.addEventListener("click", back);
+  loginInput.addEventListener("invalid", warning);
+  loginInput.addEventListener("input", sense);
+} else {
+  loginPage.style.display = "none";
+}

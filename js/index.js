@@ -15,6 +15,7 @@ const ImageArray = [
   "/image/homepageBackground.jpg",
   "/image/homepageBackground1.jpg",
   "/image/homepageBackground2.avif",
+  "/image/alps.jpg",
 ];
 const randomImage = ImageArray[Math.floor(Math.random() * ImageArray.length)];
 

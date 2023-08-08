@@ -2,11 +2,15 @@
 @import "/css/homepage.css";
 
 @import "/css/component/weather.css";
+@import "/css/component/clock.css";
 
 body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .loginPage {
