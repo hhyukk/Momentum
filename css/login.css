@@ -43,9 +43,6 @@
 .login-bottomdiv button:first-child {
   margin-right: 15px;
 }
-.hidden {
-  visibility: hidden;
-}
 
 @keyframes animation1001 {
   0% {

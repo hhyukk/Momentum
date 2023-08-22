@@ -3,6 +3,7 @@
 
 @import "/css/component/weather.css";
 @import "/css/component/clock.css";
+@import "/css/component/todolist.css";
 
 body {
   height: 100vh;
@@ -42,4 +43,7 @@ body {
   padding-left: 1px;
   color: #f9d190;
   font-weight: lighter;
+}
+.hidden.hidden {
+  visibility: hidden;
 }
