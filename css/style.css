@@ -47,3 +47,7 @@ body {
 .hidden.hidden {
   visibility: hidden;
 }
+.fa-gear {
+  color: white;
+  bottom: 0;
+}
